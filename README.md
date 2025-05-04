@@ -2,33 +2,33 @@
 
 A modular, client-side emergent RPG with AI-driven narrative. This game features dynamic storytelling, accessibility options, and a rich world to explore.
 
-## Features
+## 🎮 Features
 
-- Dynamic storytelling with branching narratives
-- Client-side operation with no server requirements
-- Accessibility features including:
+- **Dynamic Storytelling**: AI-driven narrative with branching paths and emergent gameplay
+- **Client-Side Operation**: No server requirements, play directly in your browser
+- **Accessibility Features**:
   - High contrast mode
   - Adjustable text size
   - Keyboard navigation
   - Screen reader support
-- Progress saving using localStorage
-- Responsive design for mobile devices
-- Modular architecture for easy expansion
+- **Progress Saving**: Automatic save using localStorage
+- **Responsive Design**: Play on desktop, tablet, or mobile
+- **Modular Architecture**: Easy to expand and customize
 
-## Getting Started
+## 🚀 Getting Started
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ai-dungeon-master.git
-   cd ai-dungeon-master
+   git clone https://github.com/SanhitaBan/AI_Dungeon_Master.git
+   cd AI_Dungeon_Master
    ```
 
 2. Open `index.html` in your web browser to start playing.
 
-## Project Structure
+## 📁 Project Structure
 
 ```
-ai-dungeon-master/
+AI_Dungeon_Master/
 ├── src/
 │   ├── core/
 │   │   ├── GameState.js      # Manages game state and persistence
@@ -52,7 +52,7 @@ ai-dungeon-master/
 └── README.md               # Project documentation
 ```
 
-## Development
+## 🛠️ Development
 
 ### Adding New Content
 
@@ -94,59 +94,26 @@ To add new content to the game, edit the appropriate configuration files:
 }
 ```
 
-## Recent UI Improvements
+## ✨ Recent Updates
 
-- The Game Settings panel is now always fixed to the top-right corner for easier access.
-- Duplicate event modals are prevented; only one set of event choices will appear at a time.
+- **UI Improvements**:
+  - Game Settings panel fixed to top-right corner
+  - Prevention of duplicate event modals
+  - Enhanced mobile responsiveness
+- **Gameplay Enhancements**:
+  - Improved AI narrative generation
+  - Expanded character interactions
+  - New quest system implementation
 
-## Troubleshooting
+## 🤝 Contributing
 
-### CORS or file:// Errors
-If you see errors about CORS or resources not loading when opening the game with `file://`, you need to use a local development server. This is required for modern JavaScript modules and browser security.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-**Recommended ways to run locally:**
-- **Vite (recommended, already in devDependencies):**
-  ```sh
-  npx vite
-  ```
-  Then open the provided http://localhost:5173 URL in your browser.
-- **Python SimpleHTTPServer:**
-  ```sh
-  python3 -m http.server 8000
-  ```
-  Then open http://localhost:8000 in your browser.
-- **Node http-server:**
-  ```sh
-  npm install -g http-server
-  http-server .
-  ```
-
-## Accessibility
-
-The game is designed with accessibility in mind:
-
-- Semantic HTML structure
-- ARIA attributes for screen readers
-- Keyboard navigation support
-- High contrast mode
-- Adjustable text size
-- Reduced motion options
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-Please ensure your code follows the project's style guidelines and includes appropriate tests.
-
-## License
+## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
-- Inspired by classic text-based adventure games
-- Built with modern web technologies
-- Thanks to all contributors who have helped shape this project 
+- Thanks to all contributors who have helped improve this project
+- Special thanks to the open-source community for their tools and libraries 

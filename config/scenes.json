@@ -1,0 +1,119 @@
+{
+  "intro": {
+    "id": "intro",
+    "title": "The Beginning",
+    "text": "You find yourself in a dimly lit tavern, the air thick with the scent of ale and adventure. The barkeep eyes you curiously as you take in your surroundings. What will you do?",
+    "background": "tavern.jpg",
+    "music": "tavern_ambient.mp3",
+    "choices": [
+      {
+        "id": "approach_barkeep",
+        "text": "Approach the barkeep",
+        "next": "barkeep_dialogue",
+        "requirements": {},
+        "effects": {
+          "reputation": {
+            "tavern": 5
+          }
+        }
+      },
+      {
+        "id": "explore_tavern",
+        "text": "Explore the tavern",
+        "next": "tavern_exploration",
+        "requirements": {},
+        "effects": {}
+      },
+      {
+        "id": "leave_tavern",
+        "text": "Leave the tavern",
+        "next": "town_square",
+        "requirements": {},
+        "effects": {}
+      }
+    ],
+    "events": ["intro_event"],
+    "npc": ["barkeep"],
+    "items": ["ale", "bread"]
+  },
+  "barkeep_dialogue": {
+    "id": "barkeep_dialogue",
+    "title": "The Barkeep",
+    "text": "The barkeep wipes down the counter as you approach. 'What'll it be, traveler?'",
+    "background": "tavern_counter.jpg",
+    "music": "tavern_ambient.mp3",
+    "choices": [
+      {
+        "id": "ask_news",
+        "text": "Ask for news",
+        "next": "barkeep_news",
+        "requirements": {},
+        "effects": {
+          "reputation": {
+            "barkeep": 5
+          }
+        }
+      },
+      {
+        "id": "order_drink",
+        "text": "Order a drink",
+        "next": "order_drink",
+        "requirements": {
+          "gold": 2
+        },
+        "effects": {
+          "gold": -2,
+          "reputation": {
+            "tavern": 3
+          }
+        }
+      },
+      {
+        "id": "ask_quest",
+        "text": "Ask about work",
+        "next": "barkeep_quest",
+        "requirements": {
+          "reputation": {
+            "tavern": 5
+          }
+        },
+        "effects": {}
+      }
+    ],
+    "npc": ["barkeep"],
+    "items": ["ale", "bread"]
+  },
+  "town_square": {
+    "id": "town_square",
+    "title": "Town Square",
+    "text": "The town square bustles with activity. Merchants hawk their wares, children play, and guards patrol the perimeter.",
+    "background": "town_square.jpg",
+    "music": "town_ambient.mp3",
+    "choices": [
+      {
+        "id": "market",
+        "text": "Visit the market",
+        "next": "market",
+        "requirements": {},
+        "effects": {}
+      },
+      {
+        "id": "guard_tower",
+        "text": "Approach the guard tower",
+        "next": "guard_tower",
+        "requirements": {},
+        "effects": {}
+      },
+      {
+        "id": "return_tavern",
+        "text": "Return to the tavern",
+        "next": "intro",
+        "requirements": {},
+        "effects": {}
+      }
+    ],
+    "events": ["market_day"],
+    "npc": ["merchant", "guard", "citizen"],
+    "items": []
+  }
+} 

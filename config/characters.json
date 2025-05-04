@@ -1,0 +1,101 @@
+{
+  "player": {
+    "classes": {
+      "warrior": {
+        "id": "warrior",
+        "name": "Warrior",
+        "description": "A skilled fighter trained in combat.",
+        "stats": {
+          "strength": 10,
+          "dexterity": 8,
+          "constitution": 10,
+          "intelligence": 6,
+          "wisdom": 6,
+          "charisma": 6
+        },
+        "skills": ["sword", "shield", "heavy_armor"],
+        "starting_items": ["rusty_sword", "leather_vest"]
+      },
+      "ranger": {
+        "id": "ranger",
+        "name": "Ranger",
+        "description": "A wilderness expert skilled in ranged combat.",
+        "stats": {
+          "strength": 6,
+          "dexterity": 10,
+          "constitution": 8,
+          "intelligence": 8,
+          "wisdom": 8,
+          "charisma": 6
+        },
+        "skills": ["bow", "tracking", "survival"],
+        "starting_items": ["hunting_bow", "leather_vest"]
+      }
+    }
+  },
+  "npcs": {
+    "barkeep": {
+      "id": "barkeep",
+      "name": "Old Tom",
+      "type": "merchant",
+      "description": "The grizzled owner of the tavern.",
+      "stats": {
+        "strength": 8,
+        "dexterity": 6,
+        "constitution": 8,
+        "intelligence": 10,
+        "wisdom": 10,
+        "charisma": 8
+      },
+      "inventory": ["ale", "bread", "barkeep_letter"],
+      "quests": ["tavern_cleanup", "deliver_letter"],
+      "dialogue": {
+        "greeting": "Welcome to the Rusty Tankard! What'll it be?",
+        "farewell": "Come back soon, traveler!",
+        "topics": ["news", "rumors", "work"]
+      }
+    },
+    "merchant": {
+      "id": "merchant",
+      "name": "Sarah the Trader",
+      "type": "merchant",
+      "description": "A traveling merchant with a wide selection of goods.",
+      "stats": {
+        "strength": 6,
+        "dexterity": 8,
+        "constitution": 6,
+        "intelligence": 10,
+        "wisdom": 8,
+        "charisma": 10
+      },
+      "inventory": ["health_potion", "leather_vest", "wooden_shield"],
+      "quests": ["escort_merchant"],
+      "dialogue": {
+        "greeting": "Welcome to my humble shop!",
+        "farewell": "Safe travels!",
+        "topics": ["goods", "prices", "travel"]
+      }
+    },
+    "guard": {
+      "id": "guard",
+      "name": "Captain Reynolds",
+      "type": "guard",
+      "description": "The captain of the town guard.",
+      "stats": {
+        "strength": 10,
+        "dexterity": 8,
+        "constitution": 10,
+        "intelligence": 8,
+        "wisdom": 8,
+        "charisma": 6
+      },
+      "inventory": [],
+      "quests": ["guard_duty", "patrol"],
+      "dialogue": {
+        "greeting": "Halt! State your business.",
+        "farewell": "Stay out of trouble.",
+        "topics": ["crime", "patrol", "work"]
+      }
+    }
+  }
+} 

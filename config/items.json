@@ -1,0 +1,116 @@
+{
+  "weapons": {
+    "rusty_sword": {
+      "id": "rusty_sword",
+      "name": "Rusty Sword",
+      "type": "weapon",
+      "subtype": "sword",
+      "damage": 5,
+      "weight": 3,
+      "value": 10,
+      "description": "A well-worn sword that has seen better days.",
+      "requirements": {
+        "strength": 5
+      },
+      "effects": {
+        "combat": {
+          "damage": 5,
+          "accuracy": -1
+        }
+      }
+    },
+    "hunting_bow": {
+      "id": "hunting_bow",
+      "name": "Hunting Bow",
+      "type": "weapon",
+      "subtype": "bow",
+      "damage": 4,
+      "weight": 2,
+      "value": 15,
+      "description": "A simple bow used for hunting small game.",
+      "requirements": {
+        "dexterity": 8
+      },
+      "effects": {
+        "combat": {
+          "damage": 4,
+          "range": 2
+        }
+      }
+    }
+  },
+  "armor": {
+    "leather_vest": {
+      "id": "leather_vest",
+      "name": "Leather Vest",
+      "type": "armor",
+      "subtype": "chest",
+      "defense": 3,
+      "weight": 2,
+      "value": 20,
+      "description": "A simple leather vest offering basic protection.",
+      "requirements": {},
+      "effects": {
+        "defense": 3
+      }
+    },
+    "wooden_shield": {
+      "id": "wooden_shield",
+      "name": "Wooden Shield",
+      "type": "armor",
+      "subtype": "shield",
+      "defense": 2,
+      "weight": 4,
+      "value": 15,
+      "description": "A sturdy wooden shield for blocking attacks.",
+      "requirements": {
+        "strength": 6
+      },
+      "effects": {
+        "defense": 2,
+        "block_chance": 0.2
+      }
+    }
+  },
+  "consumables": {
+    "health_potion": {
+      "id": "health_potion",
+      "name": "Health Potion",
+      "type": "consumable",
+      "subtype": "potion",
+      "weight": 0.5,
+      "value": 25,
+      "description": "A red potion that restores health.",
+      "requirements": {},
+      "effects": {
+        "health": 20
+      }
+    },
+    "bread": {
+      "id": "bread",
+      "name": "Bread",
+      "type": "consumable",
+      "subtype": "food",
+      "weight": 0.2,
+      "value": 2,
+      "description": "A simple loaf of bread.",
+      "requirements": {},
+      "effects": {
+        "health": 5
+      }
+    }
+  },
+  "quest_items": {
+    "barkeep_letter": {
+      "id": "barkeep_letter",
+      "name": "Barkeep's Letter",
+      "type": "quest",
+      "subtype": "document",
+      "weight": 0.1,
+      "value": 0,
+      "description": "A sealed letter from the barkeep.",
+      "requirements": {},
+      "effects": {}
+    }
+  }
+} 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Dungeon Master</title>
+    <meta name="description" content="A modular, client-side emergent RPG with AI-driven narrative">
+    <link rel="stylesheet" href="src/styles/base.css">
+    <link rel="stylesheet" href="src/styles/components.css">
+    <link rel="stylesheet" href="src/styles/themes.css">
+</head>
+<body>
+    <main id="game-container" role="main">
+        <div id="narrative-container" aria-live="polite">
+            <!-- Narrative content will be dynamically inserted here -->
+        </div>
+
+        <div id="choices-container" role="group" aria-label="Available choices">
+            <!-- Choice buttons will be dynamically inserted here -->
+        </div>
+
+        <div id="settings-container">
+            <button id="settings-toggle" aria-expanded="false" aria-controls="settings-panel">
+                Settings
+            </button>
+            <div id="settings-panel" aria-hidden="true">
+                <h2>Game Settings</h2>
+                <div class="setting-group">
+                    <label for="high-contrast-toggle">High Contrast Mode</label>
+                    <input type="checkbox" id="high-contrast-toggle">
+                </div>
+                <div class="setting-group">
+                    <label for="text-size-toggle">Text Size</label>
+                    <select id="text-size-toggle">
+                        <option value="small">Small</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+                <button id="reset-button">Reset Game</button>
+            </div>
+        </div>
+
+        <div id="loading-screen" class="hidden" role="status" aria-live="polite">
+            <div class="spinner"></div>
+            <p>Loading game...</p>
+        </div>
+
+        <div id="error-screen" class="hidden" role="alert">
+            <h2>Error</h2>
+            <p>An error occurred. Please reload the game.</p>
+            <button onclick="window.location.reload()">Reload Game</button>
+        </div>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html> 

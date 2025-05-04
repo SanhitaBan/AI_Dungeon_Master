@@ -1,0 +1,49 @@
+{
+  "title": "AI Dungeon Master",
+  "version": "1.0.0",
+  "defaultScene": "intro",
+  "difficulty": {
+    "easy": 1.0,
+    "normal": 1.5,
+    "hard": 2.0
+  },
+  "features": {
+    "combat": true,
+    "inventory": true,
+    "quests": true,
+    "dialogue": true
+  },
+  "modules": {
+    "inventory": {
+      "maxItems": 20,
+      "weightLimit": 100,
+      "categories": ["weapon", "armor", "consumable", "quest", "misc"]
+    },
+    "combat": {
+      "turnTime": 30,
+      "maxEnemies": 4,
+      "difficultyScaling": true
+    },
+    "dialogue": {
+      "maxChoices": 4,
+      "reputationSystem": true,
+      "persistentChoices": true
+    },
+    "quests": {
+      "maxActiveQuests": 5,
+      "questChains": true,
+      "dynamicObjectives": true
+    }
+  },
+  "ui": {
+    "theme": "dark",
+    "fontSize": "medium",
+    "highContrast": false,
+    "animations": true
+  },
+  "storage": {
+    "engine": "localStorage",
+    "autoSave": true,
+    "saveInterval": 300000
+  }
+} 

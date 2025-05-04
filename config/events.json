@@ -1,0 +1,111 @@
+{
+  "intro_event": {
+    "id": "intro_event",
+    "name": "First Steps",
+    "type": "story",
+    "trigger": "scene_start",
+    "conditions": {
+      "scene": "intro",
+      "first_visit": true
+    },
+    "effects": {
+      "reputation": {
+        "tavern": 5
+      },
+      "gold": 10
+    },
+    "dialogue": "As you enter the tavern, you notice a few coins on the floor. You pick them up and pocket them discreetly."
+  },
+  "market_day": {
+    "id": "market_day",
+    "name": "Market Day",
+    "type": "world",
+    "trigger": "time_of_day",
+    "conditions": {
+      "day": "market_day",
+      "time": "morning"
+    },
+    "effects": {
+      "merchant_prices": -0.2,
+      "crowd_density": "high"
+    },
+    "description": "The town square is bustling with merchants and shoppers. Special deals can be found everywhere!"
+  },
+  "tavern_fight": {
+    "id": "tavern_fight",
+    "name": "Bar Brawl",
+    "type": "random",
+    "trigger": "scene_enter",
+    "conditions": {
+      "scene": "intro",
+      "reputation": {
+        "tavern": "< 0"
+      }
+    },
+    "effects": {
+      "health": -10,
+      "reputation": {
+        "tavern": -10
+      }
+    },
+    "description": "A drunken patron challenges you to a fight!",
+    "choices": [
+      {
+        "text": "Fight back",
+        "effects": {
+          "health": -5,
+          "reputation": {
+            "tavern": -5
+          }
+        }
+      },
+      {
+        "text": "Try to calm them down",
+        "requirements": {
+          "charisma": 10
+        },
+        "effects": {
+          "reputation": {
+            "tavern": 5
+          }
+        }
+      },
+      {
+        "text": "Leave quickly",
+        "effects": {
+          "reputation": {
+            "tavern": -2
+          }
+        }
+      }
+    ]
+  },
+  "guard_patrol": {
+    "id": "guard_patrol",
+    "name": "Guard Patrol",
+    "type": "periodic",
+    "trigger": "time_interval",
+    "conditions": {
+      "interval": 300000,
+      "location": "town_square"
+    },
+    "effects": {
+      "crime_rate": -0.1
+    },
+    "description": "The town guard makes their regular patrol through the square."
+  },
+  "quest_available": {
+    "id": "quest_available",
+    "name": "New Quest",
+    "type": "quest",
+    "trigger": "reputation_change",
+    "conditions": {
+      "npc": "barkeep",
+      "reputation": 10
+    },
+    "effects": {
+      "quests": ["deliver_letter"]
+    },
+    "description": "The barkeep seems to have something important to discuss with you."
+  }
+} 
